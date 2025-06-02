@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Dashboard Eco3D", layout="wide")
 st.title("🌱 Dashboard Estratégico - Eco3D Innovations")
 
-# --- RUTAS DE ARCHIVOS EN GITHUB (reemplazá por los tuyos) ---
-BASE_URL = "https://raw.githubusercontent.com/TU_USUARIO/TU_REPO/main/"
+# --- RUTAS DE ARCHIVOS DESDE TU REPO ---
+BASE_URL = "https://raw.githubusercontent.com/sof14-lan/Eco-3d-Innovations/main/"
 segmentacion_url = BASE_URL + "segmentacion_comercial.xlsx"
 competidores_url = BASE_URL + "competidores.xlsx"
 barreras_url = BASE_URL + "barreras_entrada.xlsx"
@@ -41,7 +41,7 @@ st.dataframe(barreras)
 st.header("📈 Proyecciones del Mercado")
 st.dataframe(proyecciones)
 
-# Gráfico de proyección de crecimiento
+# --- Gráfico de Proyecciones ---
 fig, ax = plt.subplots(figsize=(10, 5))
 ax.plot(proyecciones["Año"], proyecciones["Tamaño Mercado Construcción 3D (USD millones)"],
         marker="o", label="Construcción 3D EE.UU.")
